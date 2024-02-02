@@ -23,6 +23,22 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
 
 ## **Modeling**
 
+### **Model Development dengan Content Based Filtering**
+
+- Pada proyek ini menggunakan fungsi tfidfvectorizer() dari library sklearn
+  - Selanjutnya, melakukan fit dan transformasi ke dalam bentuk matriks.
+  - Matriks yang kita miliki berukuran (2871, 8). Nilai 2871 merupakan ukuran data dan 8 merupakan matrik kategori jenis tempat wisata
+  - Menggunakan fungsi todense()menghasilkan vektor tf-idf dalam bentuk matriks .
+- Menggunakan untuk menghitung derajat kesamaan (similarity degree) antar tempat wisata dengan teknik cosine similarity dengan menggunakan fungsi cosine_similarity dari library sklearn.
+  - Menggunakan matriks kesamaan setiap tempat wisata dengan menampilkan nama tempat wisata dalam 5 sampel kolom (axis = 1) dan 10 sampel baris (axis=0). 
+  - Di sini, membuat fungsi place_recommendations dengan beberapa parameter sebagai berikut:<br>
+    - Nama_tempat : Nama tempat wisata (index kemiripan dataframe).
+    - Similarity_data : Dataframe mengenai similarity yang telah kita definisikan sebelumnya.
+    - Items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah ‘Place_name’ dan ‘Category’.
+    - k : Banyak rekomendasi yang ingin diberikan.
+    -  Sistem ini adalah berupa top-N recommendation. Oleh karena itu, akan memberikan sejumlah rekomendasi tempat wisata pada pengguna yang diatur dalam parameter k. <br>
+  - Dengan menggunakan argpartition, dengan mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, perlu menghapus nama_tempat yang yang dicari agar tidak muncul dalam daftar rekomendasi. Dalam kasus ini, nanti akan mencari nama tempat wisata yang mirip dengan Pantai Kesirat, sehingga perlu drop nama_tempat Pantai Kesirat agar tidak muncul dalam daftar rekomendasi yang diberikan nanti.
+  
 ## Evaluation<br>
 
 Untuk melihat visualisasi proses training, plot metrik evaluasi dengan matplotlib<br>
