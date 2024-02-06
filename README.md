@@ -99,23 +99,44 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 #### **Proses Training**
 - Pada tahap ini, model menghitung skor kecocokan antara pengguna dan tempat wisata dengan teknik embedding. Pertama, melakukan proses embedding terhadap data user dan tempat wisata. Selanjutnya, lakukan operasi perkalian dot product antara embedding user dan tempat wisata. Selain itu, dapat menambahkan bias untuk setiap user dan tempat wisata. Skor kecocokan ditetapkan dalam skala [0,1] dengan fungsi aktivasi sigmoid. Di sini, membuat class *RecommenderNet* dengan **keras Model class**. Kode class RecommenderNet ini terinspirasi dari tutorial dalam situs **Keras** dengan beberapa adaptasi sesuai kasus yang sedang diselesaikan.
 - Selanjutnya, lakukan proses compile terhadap model.
-- Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, early_stopping_loss untuk mencari val_loss dan val_root_mean_squared_error terendah, dan root mean squared error (RMSE) sebagai metrics evaluation.
+- Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, early_stopping_loss untuk mencari val_loss dan val_root_mean_squared_error terendah, dan root mean squared error (RMSE) sebagai metrics evaluation.<br>
+
+|---------------------------------------------------------------------|
+|           Menunjukan Rekomendasi untuk id pengguna: 27              |
+|---------------------------------------------------------------------|
+|  Tempat Wisata di Yogyakarta dengan Rating tertinggi dari Pengguna  |
+|---------------------------------------------------------------------|
+|        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
+|---------------------------------------------------------------------|
+|        Tugu Pal Putih Jogja    |            Taman Hiburan           |
+|     Jurang Tembelan Kanigoro   |            Taman Hiburan           |
+|               Pantai Sundak    |                Bahari              |
+|---------------------------------------------------------------------|
+|          Top 10 Rekomendasi Tempat Wisata di Yogyakarta             |
+|---------------------------------------------------------------------|
+|        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
+|---------------------------------------------------------------------|
+|        Tugu Pal Putih Jogja    |            Taman Hiburan           |
+|     Jurang Tembelan Kanigoro   |            Taman Hiburan           |
+|               Pantai Sundak    |                Bahari              |
+|---------------------------------------------------------------------|
+
+
+
+Pada tabel diatas:
+
+- Berhasil memberikan rekomendasi kepada user. Sebagai contoh, hasil di atas adalah rekomendasi untuk user dengan id 27. Dari output tersebut, dapat membandingkan antara Tempat wisata di Yogyakarta dengan rating tertinggi dari pengguna dan Top 10 Rekomendasi Tempat wisata di Yogyakarta dari Pengguna. <br>
+- Beberapa Tempat wisata rekomendasi di Yogyakarta menyediakan kategori tempat wisata yang sesuai dengan rating user. Pengguna memperoleh 5 rekomendasi tempat wisata di Yogyakarta dengan kategori ‘Category' Taman Hiburam, 3 rekomendasi tempat wisata di Yogyakarta dengan kategori Budaya, dan 2 tempat wisata di Yogyakarta dengan kategori Cagar Alam.<br>
 
   
 ## Evaluation<br>
 
 Untuk melihat visualisasi proses training, plot metrik evaluasi dengan matplotlib<br>
 
-![Teks alternatif](output/output.png)<br>
+
 
 Proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560.  Selain itu, plot metrik menghasilkan goodfit untuk, Nilai tersebut cukup bagus untuk sistem rekomendasi.<br>
 
-![Teks alternatif](output/rekomen.png)<br>
-
-Pada gambar diatas:
-
-- Berhasil memberikan rekomendasi kepada user. Sebagai contoh, hasil di atas adalah rekomendasi untuk user dengan id 27. Dari output tersebut, dapat membandingkan antara Tempat wisata di Yogyakarta dengan rating tertinggi dari pengguna dan Top 10 Rekomendasi Tempat wisata di Yogyakarta dari Pengguna. <br>
-- Beberapa Tempat wisata rekomendasi di Yogyakarta menyediakan kategori tempat wisata yang sesuai dengan rating user. Pengguna memperoleh 5 rekomendasi tempat wisata di Yogyakarta dengan kategori ‘Category' Taman Hiburam, 3 rekomendasi tempat wisata di Yogyakarta dengan kategori Budaya, dan 2 tempat wisata di Yogyakarta dengan kategori Cagar Alam.<br>
 
 
 ### **Referensi**<br>
