@@ -34,7 +34,7 @@ Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/d
         Dan setelah dilihat bahwa terdapat kolom dengan nama yang tidak jelas seperti  Unnamed: 11, Time_Minutes, dan  Unnamed: 12 dan memiliki nilai yang kosong seperti Unnamed: 11 dan Time_Minutes
       - terdiri dari 437 data input
         Dan setelah dilihat lagi dari fungsinya kolom Unnamed: 11 dan Unnamed: 12 tidak akan digunakan atau dihapus karena memiliki banyak nilai kosong dan fungsi dari kedua kolom tidak penting
-      - Pada **user** terdapat:
+    - Pada **user** terdapat:
         - terdiri dari 3 kolom yaitu: User_Id, Location, dan Age
         - terdiri dari 300 input
 ## **Data Preparation**
