@@ -34,18 +34,18 @@ Sistem rekomendasi tempat wisata yang akurat dan sesuai dengan preferensi penggu
    c. Peningkatan Keberlanjutan Pariwisata: Dengan meningkatnya kunjungan wisatawan, industri pariwisata.
 
 ### Problem Statements
-1. Bagaimana penggunaan Model Development dengan Content Based Filtering  dalam membuat sistem rekomendasi?
-2. Bagaimana penggunaan Model Development dengan Collaborative Filtering  dalam membuat sistem rekomendasi?
-3. Berapa akurasi yang dihasilkan dari proses training untuk membuat sistem rekomendasi Destinasi Wisata Kota Yogyakarta?
+1. Bagaimana penggunaan Model Development dengan Collaborative Filtering  dalam membuat sistem rekomendasi?
+2. Berapa akurasi yang dihasilkan dari proses training untuk membuat sistem rekomendasi Destinasi Wisata Kota Yogyakarta?
+3. Apakah akurasi yang dihasilkan proses training untuk membuat sistem rekomendasi Destinasi Wisata Kota Yogyakarta termasuk akurat dan baik?
    
 ### Goals
-1. Mendapatkan hasil rekomendasi sesuai kategori<br>
-   Mendapatkan rekomendasi restoran yang mirip dengan Pantai Kesirat
-2. Mendapatkan hasil rekomendasi berdasarkan rating dan kategori<br>
+1. Mendapatkan hasil rekomendasi berdasarkan rating dan kategori<br>
    memberikan rekomendasi kepada user. Memberikan rekomendasi untuk user dengan id 27. Dari output tersebut, dapat membandingkan antara Tempat wisata di Yogyakarta dengan rating tertinggi dari pengguna dan Top 10 Rekomendasi Tempat wisata di Yogyakarta dari Pengguna. <br>
     Beberapa Tempat wisata rekomendasi di Yogyakarta menyediakan kategori tempat wisata yang sesuai dengan rating user. Pengguna memperoleh 5 rekomendasi tempat wisata di Yogyakarta dengan kategori ‘Category' Taman Hiburam, 3 rekomendasi tempat wisata di Yogyakarta dengan kategori Budaya, dan 2 tempat wisata di Yogyakarta dengan kategori Cagar Alam.<br>
-3. nilai akurasi val_mse dal val_loss yang dihasilkan oleh model rendah.<br>
-   proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560. Nilai tersebut cukup bagus untuk sistem rekomendasi.
+2. nilai akurasi val_mse dal val_loss yang dihasilkan oleh model rendah.<br>
+   Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560. 
+3. Akurasi nilai mse yang dihasilkan merupakan yang akurat atau baik memiliki kesalahan rendah.<br>
+   proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik.  Nilai tersebut cukup bagus untuk sistem rekomendasi.
 
 #### Solution statements
 - memberikan rekomendasi destinasi wisata berdasarkan prediksi nilai rating baru dengan menggunakan metode hybrid (content-based dan collaborative filtering) dan Model Development dengan Collaborative Filtering.
@@ -73,15 +73,17 @@ Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/d
         - terdiri dari 300 input
 ## **Data Preparation**
 - **Menangani missing value dan kolom yang tidak diperlukan pada tabel destination**
-  -  Menghapus kolom Unnamed: 11, Time_Minutes	dan Unnamed: 12 dapat Menangani missing value dan kolom yang tidak diperlukan
+  -  Menghapus kolom Unnamed: 11, Time_Minutes	dan Unnamed: 12. Dengan menghapus kolom ini dapat Menangani missing value dan kolom yang tidak diperlukan
   -  Menggabungkan tabel destination dengan destination_rating menjadi tabel merge_destination
-  - Mengganti merge_destination denga merge_destination yang hanya city di 'Yogyakarta'
-  -  Destinasi wisata yang termasuk kedalam top 10 paling sering dikunjungi menggunakan value count:
+  - Mengganti merge_destination denga merge_destination yang hanya city di 'Yogyakarta' untuk mengetahui sistem rekomendasi wisata di Yogyakarta
+-  Destinasi wisata yang termasuk kedalam top 10 paling sering dikunjungi menggunakan value count:
     ![Teks alternatif](output/1.png)<br>
-  - Kategori tempat wisata yang terbanyak sampai yang paling sedikit jumlah pengunjungnya menggunakan plot:
+- Kategori tempat wisata yang terbanyak sampai yang paling sedikit jumlah pengunjungnya menggunakan plot:
     ![Teks alternatif](output/2.png)<br>
-  - Membuat dictionary untuk data ‘Place_Id’, 'Place_Name’, dan ‘Category’
-  - Membuang data duplikat pada variabel preparation
+- Membuat dictionary untuk data ‘Place_Id’, 'Place_Name’, dan ‘Category’
+- Membuang data duplikat pada variabel preparation agar nama wisata pada yang muncul pada saat menggunakan model tidak ada yang sama atau duplikat<br>
+
+Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumnya perlu memetakan (mapping) data user dan tempat_wisata menjadi satu value terlebih dahulu. Lalu, buatlah rating dalam skala 0 sampai 1 agar mudah dalam melakukan proses training. <br>
 
 ## **Modeling**
 
@@ -92,7 +94,7 @@ Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/d
 - Memetakan ‘User_Id’ dan ‘Place_Id’ ke dataframe yang berkaitan.
 - Mengecek beberapa hal dalam data seperti jumlah user, jumlah tempat wisata, kemudian mengubah nilai rating menjadi float.<br>
 
-Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumnya perlu memetakan (mapping) data user dan tempat_wisata menjadi satu value terlebih dahulu. Lalu, buatlah rating dalam skala 0 sampai 1 agar mudah dalam melakukan proses training. <br>
+
 
 ### **Proses Training**
 - Pada tahap ini, model menghitung skor kecocokan antara pengguna dan tempat wisata dengan teknik embedding. Pertama, melakukan proses embedding terhadap data user dan tempat wisata. Selanjutnya, lakukan operasi perkalian dot product antara embedding user dan tempat wisata. Selain itu, dapat menambahkan bias untuk setiap user dan tempat wisata. Skor kecocokan ditetapkan dalam skala [0,1] dengan fungsi aktivasi sigmoid. Di sini, membuat class *RecommenderNet* dengan **keras Model class**. Kode class RecommenderNet ini terinspirasi dari tutorial dalam situs **Keras** dengan beberapa adaptasi sesuai kasus yang sedang diselesaikan.
@@ -106,7 +108,7 @@ Untuk melihat visualisasi proses training, plot metrik evaluasi dengan matplotli
 
 ![Teks alternatif](output/output.png)<br>
 
-Proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560. Nilai tersebut cukup bagus untuk sistem rekomendasi.<br>
+Proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560.  Selain itu, plot metrik menghasilkan goodfit untuk, Nilai tersebut cukup bagus untuk sistem rekomendasi.<br>
 
 ![Teks alternatif](output/rekomen.png)<br>
 
