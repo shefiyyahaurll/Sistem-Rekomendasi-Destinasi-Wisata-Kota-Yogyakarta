@@ -72,28 +72,8 @@ Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/d
 
 ## **Modeling**
 
-### **Model Development dengan Content Based Filtering**
-
-- Pada proyek ini menggunakan fungsi tfidfvectorizer() dari library sklearn
-  - Selanjutnya, melakukan fit dan transformasi ke dalam bentuk matriks.
-  - Matriks yang memiliki berukuran (2871, 8). Nilai 2871 merupakan ukuran data dan 8 merupakan matrik kategori jenis tempat wisata
-  - Menggunakan fungsi todense()menghasilkan vektor tf-idf dalam bentuk matriks .
-- Menggunakan untuk menghitung derajat kesamaan (similarity degree) antar tempat wisata dengan teknik cosine similarity dengan menggunakan fungsi cosine_similarity dari library sklearn.
-  - Menggunakan matriks kesamaan setiap tempat wisata dengan menampilkan nama tempat wisata dalam 5 sampel kolom (axis = 1) dan 10 sampel baris (axis=0). 
-  - Di sini, membuat fungsi place_recommendations dengan beberapa parameter sebagai berikut:<br>
-    - Nama_tempat : Nama tempat wisata (index kemiripan dataframe).
-    - Similarity_data : Dataframe mengenai similarity yang telah didefinisikan sebelumnya.
-    - Items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah ‘Place_name’ dan ‘Category’.
-    - k : Banyak rekomendasi yang ingin diberikan.
-    -  Sistem ini adalah berupa top-N recommendation. Oleh karena itu, akan memberikan sejumlah rekomendasi tempat wisata pada pengguna yang diatur dalam parameter k. <br>
-  - Dengan menggunakan argpartition, dengan mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, perlu menghapus nama_tempat yang yang dicari agar tidak muncul dalam daftar rekomendasi. Dalam kasus ini, nanti akan mencari nama tempat wisata yang mirip dengan Pantai Kesirat, sehingga perlu drop nama_tempat Pantai Kesirat agar tidak muncul dalam daftar rekomendasi yang diberikan nanti.<br>
-
 ### **Model Development dengan Collaborative Filtering**
-#### Data Understanding
-- impor library
 - Selanjutnya,  lakukan load data di awal dan membaca file **tourism_rating.csv**. Saat itu, membuat variabel destination_rating dan menetapkan data pada variabel tersebut. Untuk memudahkan, ubah nama variabel destination_rating menjadi df.<br>
-
-#### Data Preparation
 - Memahami data rating yang dimiliki.
 - Menyandikan (encode) fitur ‘User_Id’ dan ‘Place_Id’ ke dalam indeks integer. 
 - Memetakan ‘User_Id’ dan ‘Place_Id’ ke dataframe yang berkaitan.
