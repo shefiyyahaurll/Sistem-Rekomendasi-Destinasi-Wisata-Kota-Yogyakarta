@@ -23,13 +23,16 @@ kebutuhan untuk mengembangkan sistem rekomendasi tempat wisata di Yogyakarta, In
 ### Problem Statements
 1. Bagaimana penggunaan Model Development dengan Content Based Filtering  dalam membuat sistem rekomendasi?
 2. Bagaimana penggunaan Model Development dengan Collaborative Filtering  dalam membuat sistem rekomendasi?
-3. Berapa akurasi yang dihasilkan dari model KNN untuk membuat sistem rekomendasi Destinasi Wisata Kota Yogyakarta?
+3. Berapa akurasi yang dihasilkan dari proses training untuk membuat sistem rekomendasi Destinasi Wisata Kota Yogyakarta?
    
 ### Goals
-1. Menganalisis fitur-fitur penting dalam database PIMA Indian menggunakan metode KNN untuk klasifikasi diabetes.
-2. Terbukti pada hasil tahap multivariate analysis terdapat fitur yang memiliki nilai kolerasi tertinggi yaitu 'glucose' dimana memiliki nilai kolerasi 0.5
-3. nilai akurasi mse yang dihasilkan oleh model rendah.
-
+1. Mendapatkan hasil rekomendasi sesuai kategori
+   Mendapatkan rekomendasi restoran yang mirip dengan Pantai Kesirat
+2. Mendapatkan hasil rekomendasi berdasarkan rating dan kategori
+   memberikan rekomendasi kepada user. Memberikan rekomendasi untuk user dengan id 27. Dari output tersebut, dapat membandingkan antara Tempat wisata di Yogyakarta dengan rating tertinggi dari pengguna dan Top 10 Rekomendasi Tempat wisata di Yogyakarta dari Pengguna. <br>
+    Beberapa Tempat wisata rekomendasi di Yogyakarta menyediakan kategori tempat wisata yang sesuai dengan rating user. Pengguna memperoleh 5 rekomendasi tempat wisata di Yogyakarta dengan kategori ‘Category' Taman Hiburam, 3 rekomendasi tempat wisata di Yogyakarta dengan kategori Budaya, dan 2 tempat wisata di Yogyakarta dengan kategori Cagar Alam.<br>
+4. nilai akurasi val_mse dal val_loss yang dihasilkan oleh model rendah.
+   proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560. Nilai tersebut cukup bagus untuk sistem rekomendasi.
 
 #### Solution statements
 
