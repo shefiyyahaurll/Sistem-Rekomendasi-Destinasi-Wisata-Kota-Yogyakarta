@@ -101,10 +101,11 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 - Selanjutnya, lakukan proses compile terhadap model.
 - Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, early_stopping_loss untuk mencari val_loss dan val_root_mean_squared_error terendah, dan root mean squared error (RMSE) sebagai metrics evaluation.<br>
 
-|---------------------------------------------------------------------|
-|           Menunjukan Rekomendasi untuk id pengguna: 27              |
-|---------------------------------------------------------------------|
-|  Tempat Wisata di Yogyakarta dengan Rating tertinggi dari Pengguna  |
+
+##          Menunjukan Rekomendasi untuk id pengguna: 27              
+
+  Tempat Wisata di Yogyakarta dengan Rating tertinggi dari Pengguna
+  --------------------------------------------------------------------
 |---------------------------------------------------------------------|
 |        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
 |---------------------------------------------------------------------|
@@ -112,7 +113,9 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 |     Jurang Tembelan Kanigoro   |            Taman Hiburan           |
 |               Pantai Sundak    |                Bahari              |
 |---------------------------------------------------------------------|
-|          Top 10 Rekomendasi Tempat Wisata di Yogyakarta             |
+
+          Top 10 Rekomendasi Tempat Wisata di Yogyakarta          
+-----------------------------------------------------------------------
 |---------------------------------------------------------------------|
 |        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
 |---------------------------------------------------------------------|
