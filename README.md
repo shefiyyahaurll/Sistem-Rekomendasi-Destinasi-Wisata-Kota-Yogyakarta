@@ -19,7 +19,19 @@ kebutuhan untuk mengembangkan sistem rekomendasi tempat wisata di Yogyakarta, In
        Wisatawan seringkali mengalami kesulitan dalam memilih tujuan wisata karena informasi yang begitu banyak dan bervariasi. Dalam penelitian ini, sistem rekomendasi tempat wisata digunakan untuk memberikan penyaringan dari informasi yang sangat banyak di dunia maya, sehingga dapat memberikan saran atau rekomendasi pilihan objek wisata yang sesuai dengan preferensi wisatawan.
 
     3. Meningkatkan Pengalaman Wisatawan
-       Dengan adanya sistem rekomendasi tempat wisata yang akurat, diharapkan dapat meningkatkan pengalaman wisatawan dalam memilih dan merencanakan perjalanan wisata mereka. Hal ini juga dapat membantu wisatawan yang merencanakan sendiri tujuan wisatanya, sehingga memerlukan waktu yang lebih sedikit untuk mengumpulkan informasi.
+       Dengan adanya sistem rekomendasi tempat wisata yang akurat, diharapkan dapat meningkatkan pengalaman wisatawan dalam memilih dan merencanakan perjalanan wisata mereka. Hal ini juga dapat membantu wisatawan yang merencanakan sendiri tujuan wisatanya, sehingga memerlukan waktu yang lebih sedikit untuk mengumpulkan informasi.<br>
+
+Sistem rekomendasi tempat wisata yang akurat dan sesuai dengan preferensi pengguna di Yogyakarta diharapkan dapat meningkatkan pengalaman wisatawan dan berdampak positif pada industri pariwisata. Berikut adalah penjelasan lebih rinci:<br>
+
+1. Meningkatkan Pengalaman Wisatawan:
+   a. Penyaringan Informasi: Sistem rekomendasi akan membantu wisatawan dalam memilih tujuan wisata dengan menyaring informasi yang sangat banyak dan bervariasi di dunia maya. Hal ini akan memungkinkan wisatawan untuk mendapatkan rekomendasi pilihan objek wisata yang sesuai dengan preferensi mereka.
+   b. Efisiensi Perencanaan Perjalanan: Dengan adanya sistem rekomendasi, wisatawan akan dapat merencanakan perjalanan wisata mereka dengan lebih efisien. Mereka tidak perlu lagi menghabiskan waktu yang banyak untuk mengumpulkan informasi, karena sistem akan memberikan rekomendasi tempat wisata berdasarkan preferensi mereka.
+   c. Personalisasi Pengalaman: Sistem rekomendasi dapat memberikan rekomendasi yang lebih personal dan sesuai dengan minat dan kebutuhan wisatawan, sehingga dapat meningkatkan kepuasan dan pengalaman wisata mereka.
+
+2. Dampak Terhadap Industri Pariwisata:
+   a. Peningkatan Kunjungan Wisatawan: Dengan adanya sistem rekomendasi yang akurat, diharapkan akan terjadi peningkatan kunjungan wisatawan ke Yogyakarta. Hal ini akan berdampak positif pada pendapatan dari sektor pariwisata, termasuk pendapatan dari hotel, restoran, transportasi, dan industri kreatif lokal.
+   b. Peningkatan Ketersediaan Informasi: Sistem rekomendasi juga dapat membantu dalam mempromosikan berbagai destinasi wisata di Yogyakarta, sehingga dapat meningkatkan eksposur dan ketersediaan informasi mengenai tempat wisata yang mungkin belum terlalu terkenal.
+   c. Peningkatan Keberlanjutan Pariwisata: Dengan meningkatnya kunjungan wisatawan, industri pariwisata.
 
 ### Problem Statements
 1. Bagaimana penggunaan Model Development dengan Content Based Filtering  dalam membuat sistem rekomendasi?
