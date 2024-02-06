@@ -37,7 +37,26 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
     - Items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah ‘Place_name’ dan ‘Category’.
     - k : Banyak rekomendasi yang ingin diberikan.
     -  Sistem ini adalah berupa top-N recommendation. Oleh karena itu, akan memberikan sejumlah rekomendasi tempat wisata pada pengguna yang diatur dalam parameter k. <br>
-  - Dengan menggunakan argpartition, dengan mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, perlu menghapus nama_tempat yang yang dicari agar tidak muncul dalam daftar rekomendasi. Dalam kasus ini, nanti akan mencari nama tempat wisata yang mirip dengan Pantai Kesirat, sehingga perlu drop nama_tempat Pantai Kesirat agar tidak muncul dalam daftar rekomendasi yang diberikan nanti.
+  - Dengan menggunakan argpartition, dengan mengambil sejumlah nilai k tertinggi dari similarity data (dalam kasus ini: dataframe cosine_sim_df). Kemudian, mengambil data dari bobot (tingkat kesamaan) tertinggi ke terendah. Data ini dimasukkan ke dalam variabel closest. Berikutnya, perlu menghapus nama_tempat yang yang dicari agar tidak muncul dalam daftar rekomendasi. Dalam kasus ini, nanti akan mencari nama tempat wisata yang mirip dengan Pantai Kesirat, sehingga perlu drop nama_tempat Pantai Kesirat agar tidak muncul dalam daftar rekomendasi yang diberikan nanti.<br>
+
+### **Model Development dengan Collaborative Filtering**
+#### Data Understanding
+- impor library
+- Selanjutnya,  lakukan load data di awal dan membaca file **tourism_rating.csv**. Saat itu, membuat variabel destination_rating dan menetapkan data pada variabel tersebut. Untuk memudahkan, ubah nama variabel destination_rating menjadi df.<br>
+
+#### Data Preparation
+- Memahami data rating yang dimiliki.
+- Menyandikan (encode) fitur ‘User_Id’ dan ‘Place_Id’ ke dalam indeks integer. 
+- Memetakan ‘User_Id’ dan ‘Place_Id’ ke dataframe yang berkaitan.
+- Mengecek beberapa hal dalam data seperti jumlah user, jumlah tempat wisata, kemudian mengubah nilai rating menjadi float.<br>
+
+Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumnya perlu memetakan (mapping) data user dan tempat_wisata menjadi satu value terlebih dahulu. Lalu, buatlah rating dalam skala 0 sampai 1 agar mudah dalam melakukan proses training. <br>
+
+### **Proses Training**
+- Pada tahap ini, model menghitung skor kecocokan antara pengguna dan tempat wisata dengan teknik embedding. Pertama, melakukan proses embedding terhadap data user dan tempat wisata. Selanjutnya, lakukan operasi perkalian dot product antara embedding user dan tempat wisata. Selain itu, dapat menambahkan bias untuk setiap user dan tempat wisata. Skor kecocokan ditetapkan dalam skala [0,1] dengan fungsi aktivasi sigmoid. Di sini, membuat class *RecommenderNet* dengan **keras Model class**. Kode class RecommenderNet ini terinspirasi dari tutorial dalam situs **Keras** dengan beberapa adaptasi sesuai kasus yang sedang diselesaikan.
+- Selanjutnya, lakukan proses compile terhadap model.
+- Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, dan root mean squared error (RMSE) sebagai metrics evaluation.
+
   
 ## Evaluation<br>
 
