@@ -27,13 +27,13 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
 
 - Pada proyek ini menggunakan fungsi tfidfvectorizer() dari library sklearn
   - Selanjutnya, melakukan fit dan transformasi ke dalam bentuk matriks.
-  - Matriks yang kita miliki berukuran (2871, 8). Nilai 2871 merupakan ukuran data dan 8 merupakan matrik kategori jenis tempat wisata
+  - Matriks yang memiliki berukuran (2871, 8). Nilai 2871 merupakan ukuran data dan 8 merupakan matrik kategori jenis tempat wisata
   - Menggunakan fungsi todense()menghasilkan vektor tf-idf dalam bentuk matriks .
 - Menggunakan untuk menghitung derajat kesamaan (similarity degree) antar tempat wisata dengan teknik cosine similarity dengan menggunakan fungsi cosine_similarity dari library sklearn.
   - Menggunakan matriks kesamaan setiap tempat wisata dengan menampilkan nama tempat wisata dalam 5 sampel kolom (axis = 1) dan 10 sampel baris (axis=0). 
   - Di sini, membuat fungsi place_recommendations dengan beberapa parameter sebagai berikut:<br>
     - Nama_tempat : Nama tempat wisata (index kemiripan dataframe).
-    - Similarity_data : Dataframe mengenai similarity yang telah kita definisikan sebelumnya.
+    - Similarity_data : Dataframe mengenai similarity yang telah didefinisikan sebelumnya.
     - Items : Nama dan fitur yang digunakan untuk mendefinisikan kemiripan, dalam hal ini adalah ‘Place_name’ dan ‘Category’.
     - k : Banyak rekomendasi yang ingin diberikan.
     -  Sistem ini adalah berupa top-N recommendation. Oleh karena itu, akan memberikan sejumlah rekomendasi tempat wisata pada pengguna yang diatur dalam parameter k. <br>
@@ -51,7 +51,7 @@ Proses training model cukup smooth dan model konvergen pada epochs dengan menggu
 
 Pada gambar diatas:
 
-- Berhasil memberikan rekomendasi kepada user. Sebagai contoh, hasil di atas adalah rekomendasi untuk user dengan id 27. Dari output tersebut, kita dapat membandingkan antara Tempat wisata di Yogyakarta dengan rating tertinggi dari pengguna dan Top 10 Rekomendasi Tempat wisata di Yogyakarta dari Pengguna. <br>
+- Berhasil memberikan rekomendasi kepada user. Sebagai contoh, hasil di atas adalah rekomendasi untuk user dengan id 27. Dari output tersebut, dapat membandingkan antara Tempat wisata di Yogyakarta dengan rating tertinggi dari pengguna dan Top 10 Rekomendasi Tempat wisata di Yogyakarta dari Pengguna. <br>
 - Beberapa Tempat wisata rekomendasi di Yogyakarta menyediakan kategori tempat wisata yang sesuai dengan rating user. Pengguna memperoleh 5 rekomendasi tempat wisata di Yogyakarta dengan kategori ‘Category' Taman Hiburam, 3 rekomendasi tempat wisata di Yogyakarta dengan kategori Budaya, dan 2 tempat wisata di Yogyakarta dengan kategori Cagar Alam.<br>
 
 
