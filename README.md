@@ -25,7 +25,7 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
   -  Menggabungkan tabel destination dengan destination_rating menjadi tabel merge_destination
   -  **mengganti merge_destination denga merge_destination yang hanya city di 'Yogyakarta'
   -  Destinasi wisata yang termasuk kedalam top 10 paling sering dikunjungi menggunakan value count:
-    ![Teks alternatif](output/rekomen.png)<br>
+    ![Teks alternatif](output/1.png)<br>
 
 ## **Modeling**
 
