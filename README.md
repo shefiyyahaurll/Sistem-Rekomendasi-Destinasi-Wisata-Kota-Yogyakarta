@@ -48,7 +48,7 @@ Sistem rekomendasi tempat wisata yang akurat dan sesuai dengan preferensi penggu
    proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik.  Nilai tersebut cukup bagus untuk sistem rekomendasi.
 
 #### Solution statements
-- memberikan rekomendasi destinasi wisata berdasarkan prediksi nilai rating baru dengan menggunakan metode hybrid (content-based dan collaborative filtering) dan Model Development dengan Collaborative Filtering.
+- memberikan rekomendasi destinasi wisata berdasarkan prediksi nilai rating baru dengan menggunakan metode  Model Development dengan Collaborative Filtering.
 - Sistem membantu wisatawan dalam memilih destinasi wisata di daerah Yogyakarta.
   
 ## **Data Understanding**
