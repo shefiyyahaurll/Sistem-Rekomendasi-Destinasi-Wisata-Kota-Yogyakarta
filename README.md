@@ -101,12 +101,7 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 - Selanjutnya, lakukan proses compile terhadap model.
 - Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, early_stopping_loss untuk mencari val_loss dan val_root_mean_squared_error terendah, dan root mean squared error (RMSE) sebagai metrics evaluation.<br>
 
-| Name  | Age |
-| ----- | --- |
-| Bob   | 27  |
-| Alice | 23  |
-
-
+**Hasil sistem rekomendasi tempat wisata di Yogyakarta menunjukkan hasil sebagai berikut**:<br>
 
 ####          Menunjukan Rekomendasi untuk id pengguna: 27              
 
