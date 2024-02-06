@@ -62,14 +62,34 @@ Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/d
 - Melakukan Univariate Exploratory Data Analysis:
     - Pada **destination_rating** terdapat:
       - terdiri dari 3 kolom yaitu: User_Id, Place_Id, dan Place_Ratings
+        - User_Id: Ini adalah identifikasi unik untuk pengguna.
+        - Place_Id: Ini adalah identifikasi unik untuk tempat atau lokasi.
+        - Place_Ratings:  Ini adalah penilaian atau rating yang diberikan oleh pengguna untuk suatu tempat.
       - terdiri dari 10000 input
     - Pada **destination** terdapat:
       - terdiri dari 13 kolom yaitu: Place_Id, Place_Name, Description, Category, City, Price, Rating, Time_Minutes, Coordinate, Lat, Long, Unnamed: 11, dan Unnamed: 12<br>
+          - Place_Id: Ini adalah identifikasi unik untuk tempat atau lokasi.
+          - Place_Name: Nama tempat atau lokasi.
+          - Description: Deskripsi atau informasi tambahan tentang tempat tersebut.
+          - Category: Kategori atau jenis tempat tersebut
+          - City: Kota di mana tempat tersebut berada.
+          - Price: Rentang harga atau kisaran biaya untuk mengakses atau menggunakan tempat tersebut.
+          - Rating: Penilaian atau rating yang diberikan kepada tempat tersebut.
+          - Time_Minutes:  Estimasi waktu dalam menit yang dibutuhkan untuk mencapai tempat tersebut dari lokasi tertentu.
+          - Coordinate: Koordinat geografis dari tempat tersebut, mungkin dalam format tertentu seperti latitude dan longitude.
+          - Lat: Latitude (garis lintang) dari lokasi tempat tersebut.
+          - Long:  Longitude (garis bujur) dari lokasi tempat tersebut.
+          - Unnamed: 11:Kolom yang tidak memiliki nama. Ini mungkin disebabkan oleh kesalahan dalam penamaan atau pemformatan basis data.
+          - Unnamed: 12:Kolom yang tidak memiliki nama. Ini mungkin disebabkan oleh kesalahan dalam penamaan atau pemformatan basis data.<br>
+          
         Dan setelah dilihat bahwa terdapat kolom dengan nama yang tidak jelas seperti  Unnamed: 11, Time_Minutes, dan  Unnamed: 12 dan memiliki nilai yang kosong seperti Unnamed: 11 dan Time_Minutes
       - terdiri dari 437 data input
         Dan setelah dilihat lagi dari fungsinya kolom Unnamed: 11 dan Unnamed: 12 tidak akan digunakan atau dihapus karena memiliki banyak nilai kosong dan fungsi dari kedua kolom tidak penting
     - Pada **user** terdapat:
         - terdiri dari 3 kolom yaitu: User_Id, Location, dan Age
+          - User_Id: Ini adalah identifikasi unik untuk pengguna. 
+          - Location: ni adalah lokasi atau tempat tinggal pengguna. 
+          - Age:  Ini adalah usia pengguna, yaitu rentang waktu sejak tanggal lahir pengguna hingga saat ini. 
         - terdiri dari 300 input
 ## **Data Preparation**
 - **Menangani missing value dan kolom yang tidak diperlukan pada tabel destination**
