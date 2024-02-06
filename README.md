@@ -108,9 +108,9 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 
 
 
-##          Menunjukan Rekomendasi untuk id pengguna: 27              
+####          Menunjukan Rekomendasi untuk id pengguna: 27              
 
-  Tempat Wisata di Yogyakarta dengan Rating tertinggi dari Pengguna
+#####  Tempat Wisata di Yogyakarta dengan Rating tertinggi dari Pengguna
   --------------------------------------------------------------------
 
 |        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
@@ -119,8 +119,7 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 |     Jurang Tembelan Kanigoro   |            Taman Hiburan           |
 |               Pantai Sundak    |                Bahari              |
 
-
-##                      Top 10 Rekomendasi Tempat Wisata di Yogyakarta          
+#####                      Top 10 Rekomendasi Tempat Wisata di Yogyakarta          
 
 |             Nama Tempat Wisata                 |      Kategori Tempat Wisata        |
 |       ---------------------------------------  | ---------------------------------  |
