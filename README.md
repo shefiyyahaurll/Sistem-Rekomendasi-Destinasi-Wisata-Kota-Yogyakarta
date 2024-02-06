@@ -112,23 +112,29 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 
   Tempat Wisata di Yogyakarta dengan Rating tertinggi dari Pengguna
   --------------------------------------------------------------------
-|---------------------------------------------------------------------|
-|        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
-|---------------------------------------------------------------------|
-|        Tugu Pal Putih Jogja    |            Taman Hiburan           |
-|     Jurang Tembelan Kanigoro   |            Taman Hiburan           |
-|               Pantai Sundak    |                Bahari              |
-|---------------------------------------------------------------------|
 
-          Top 10 Rekomendasi Tempat Wisata di Yogyakarta          
------------------------------------------------------------------------
-|---------------------------------------------------------------------|
 |        Nama Tempat Wisata      |      Kategori Tempat Wisata        |
-|---------------------------------------------------------------------|
+|  ----------------------------  |    ------------------------------- |
 |        Tugu Pal Putih Jogja    |            Taman Hiburan           |
 |     Jurang Tembelan Kanigoro   |            Taman Hiburan           |
 |               Pantai Sundak    |                Bahari              |
-|---------------------------------------------------------------------|
+
+
+##                      Top 10 Rekomendasi Tempat Wisata di Yogyakarta          
+
+|             Nama Tempat Wisata                 |      Kategori Tempat Wisata        |
+|       ---------------------------------------  | ---------------------------------  |
+|             Desa Wisata Gamplong               |            Taman Hiburan           |
+|          Museum Benteng Vredeburg Yogyakarta   |                Budaya              |
+|                  Monumen Yogya Kembali         |                Budaya              |
+|                     Monumen Sanapati           |                Budaya              |
+|              Kampung Wisata Taman Sari         |            Taman Hiburan           |
+|                    Sumur Gumuling              |            Taman Hiburan           |
+|       Puncak Gunung Api Purba - Nglanggeran    |              Cagar Alam            |
+|             Bukit Bintang Yogyakarta           |            Taman Hiburan           |
+| The World Landmarks - Merapi Park Yogyakarta   |            Taman Hiburan           |
+|               Bukit Wisata Pulepayung          |              Cagar Alam            |
+
 
 
 
