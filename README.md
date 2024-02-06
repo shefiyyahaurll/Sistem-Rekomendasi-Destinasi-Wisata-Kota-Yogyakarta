@@ -140,7 +140,7 @@ Pada tabel diatas:
 
 Untuk melihat visualisasi proses training, plot metrik evaluasi dengan matplotlib<br>
 
-
+    ![Teks alternatif](output/output.png)<br>
 
 Proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560.  Selain itu, plot metrik menghasilkan goodfit untuk, Nilai tersebut cukup bagus untuk sistem rekomendasi.<br>
 
