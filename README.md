@@ -18,7 +18,25 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
 #### Solution statements
 
 ## **Data Understanding**
+Berikut link Diabetes dataset dari kaggle: https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination<br>
 
+- Import library pandas, matplotlib.pyplot, seaborn.
+- Load Data dari folder dataset
+    - tourism_with_id.csv : mengandung informasi tempak wisata di 5 kota besar di Indonesia (hanya kota Yogyakarta yang dipakai)<br>
+    - user.csv : mengandung informasi pengguna untuk membuat rekomendasi fitur berdasar pengguna<br>
+    - tourism_rating.csv : mengandung informasi pengguna, tempat wisata, dan rating untuk membuat sistem rekomendasi berdasar rating
+- Melakukan Univariate Exploratory Data Analysis:
+    - Pada **destination_rating** terdapat:
+      - terdiri dari 3 kolom yaitu: User_Id, Place_Id, dan Place_Ratings
+      - terdiri dari 10000 input
+    - Pada **destination** terdapat:
+      - terdiri dari 13 kolom yaitu: Place_Id, Place_Name, Description, Category, City, Price, Rating, Time_Minutes, Coordinate, Lat, Long, Unnamed: 11, dan Unnamed: 12<br>
+        Dan setelah dilihat bahwa terdapat kolom dengan nama yang tidak jelas seperti  Unnamed: 11, Time_Minutes, dan  Unnamed: 12 dan memiliki nilai yang kosong seperti Unnamed: 11 dan Time_Minutes
+      - terdiri dari 437 data input
+        Dan setelah dilihat lagi dari fungsinya kolom Unnamed: 11 dan Unnamed: 12 tidak akan digunakan atau dihapus karena memiliki banyak nilai kosong dan fungsi dari kedua kolom tidak penting
+      - Pada **user** terdapat:
+        - terdiri dari 3 kolom yaitu: User_Id, Location, dan Age
+        - terdiri dari 300 input
 ## **Data Preparation**
 - **Menangani missing value dan kolom yang tidak diperlukan pada tabel destination**
   -  Menghapus kolom Unnamed: 11, Time_Minutes	dan Unnamed: 12 dapat Menangani missing value dan kolom yang tidak diperlukan
