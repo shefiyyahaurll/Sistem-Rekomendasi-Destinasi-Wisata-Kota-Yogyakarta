@@ -21,8 +21,15 @@ kebutuhan untuk mengembangkan sistem rekomendasi tempat wisata di Yogyakarta, In
        Dengan adanya sistem rekomendasi tempat wisata yang akurat, diharapkan dapat meningkatkan pengalaman wisatawan dalam memilih dan merencanakan perjalanan wisata mereka. Hal ini juga dapat membantu wisatawan yang merencanakan sendiri tujuan wisatanya, sehingga memerlukan waktu yang lebih sedikit untuk mengumpulkan informasi.
 
 ### Problem Statements
-
+1. Bagaimana penggunaan Model Development dengan Content Based Filtering  dalam membuat sistem rekomendasi?
+2. Bagaimana penggunaan Model Development dengan Collaborative Filtering  dalam membuat sistem rekomendasi?
+3. Berapa akurasi yang dihasilkan dari model KNN untuk membuat sistem rekomendasi Destinasi Wisata Kota Yogyakarta?
+   
 ### Goals
+1. Menganalisis fitur-fitur penting dalam database PIMA Indian menggunakan metode KNN untuk klasifikasi diabetes.
+2. Terbukti pada hasil tahap multivariate analysis terdapat fitur yang memiliki nilai kolerasi tertinggi yaitu 'glucose' dimana memiliki nilai kolerasi 0.5
+3. nilai akurasi mse yang dihasilkan oleh model rendah.
+
 
 #### Solution statements
 
