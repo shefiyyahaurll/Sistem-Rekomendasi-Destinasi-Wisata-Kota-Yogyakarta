@@ -27,7 +27,9 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
   -  Destinasi wisata yang termasuk kedalam top 10 paling sering dikunjungi menggunakan value count:
     ![Teks alternatif](output/1.png)<br>
   - Kategori tempat wisata yang terbanyak sampai yang paling sedikit jumlah pengunjungnya menggunakan plot:
-    ![Teks alternatif](output/1.png)<br>
+    ![Teks alternatif](output/2.png)<br>
+  - Membuat dictionary untuk data ‘Place_Id’, 'Place_Name’, dan ‘Category’
+  - Membuang data duplikat pada variabel preparation
 
 ## **Modeling**
 
