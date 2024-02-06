@@ -18,7 +18,7 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
 #### Solution statements
 
 ## **Data Understanding**
-Berikut link Diabetes dataset dari kaggle: https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination<br>
+Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination<br>
 
 - Import library pandas, matplotlib.pyplot, seaborn.
 - Load Data dari folder dataset
