@@ -102,7 +102,7 @@ Selanjutnya, bagi data train dan validasi dengan komposisi 80:20. Namun sebelumn
 ### **Proses Training**
 - Pada tahap ini, model menghitung skor kecocokan antara pengguna dan tempat wisata dengan teknik embedding. Pertama, melakukan proses embedding terhadap data user dan tempat wisata. Selanjutnya, lakukan operasi perkalian dot product antara embedding user dan tempat wisata. Selain itu, dapat menambahkan bias untuk setiap user dan tempat wisata. Skor kecocokan ditetapkan dalam skala [0,1] dengan fungsi aktivasi sigmoid. Di sini, membuat class *RecommenderNet* dengan **keras Model class**. Kode class RecommenderNet ini terinspirasi dari tutorial dalam situs **Keras** dengan beberapa adaptasi sesuai kasus yang sedang diselesaikan.
 - Selanjutnya, lakukan proses compile terhadap model.
-- Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, dan root mean squared error (RMSE) sebagai metrics evaluation.
+- Model ini menggunakan  Mean Squared Error untuk menghitung loss function, Adam (Adaptive Moment Estimation) sebagai optimizer, early_stopping_loss untuk mencari val_loss dan val_root_mean_squared_error terendah, dan root mean squared error (RMSE) sebagai metrics evaluation.
 
   
 ## Evaluation<br>
