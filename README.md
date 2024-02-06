@@ -35,7 +35,9 @@ kebutuhan untuk mengembangkan sistem rekomendasi tempat wisata di Yogyakarta, In
    proses training model cukup smooth dan model konvergen pada epochs dengan menggunakan callbacks untuk mencapai 'root_mean_squared_error' dan 'val_root_mean_squared_error' terbaik. Dari proses ini memperoleh nilai error akhir sebesar sekitar 0.3339 dan error pada data validasi sebesar 0.3560. Nilai tersebut cukup bagus untuk sistem rekomendasi.
 
 #### Solution statements
-
+- memberikan rekomendasi destinasi wisata berdasarkan prediksi nilai rating baru dengan menggunakan metode hybrid (content-based dan collaborative filtering) dan Model Development dengan Collaborative Filtering.
+- Sistem membantu wisatawan dalam memilih destinasi wisata di daerah Yogyakarta.
+  
 ## **Data Understanding**
 Berikut link Indonesia Tourism Destination dari kaggle: https://www.kaggle.com/datasets/aprabowo/indonesia-tourism-destination<br>
 
