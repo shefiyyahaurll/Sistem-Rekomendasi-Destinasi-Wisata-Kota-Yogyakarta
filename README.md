@@ -23,8 +23,10 @@ Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan
 - **Menangani missing value dan kolom yang tidak diperlukan pada tabel destination**
   -  Menghapus kolom Unnamed: 11, Time_Minutes	dan Unnamed: 12 dapat Menangani missing value dan kolom yang tidak diperlukan
   -  Menggabungkan tabel destination dengan destination_rating menjadi tabel merge_destination
-  -  **mengganti merge_destination denga merge_destination yang hanya city di 'Yogyakarta'
+  - Mengganti merge_destination denga merge_destination yang hanya city di 'Yogyakarta'
   -  Destinasi wisata yang termasuk kedalam top 10 paling sering dikunjungi menggunakan value count:
+    ![Teks alternatif](output/1.png)<br>
+  - Kategori tempat wisata yang terbanyak sampai yang paling sedikit jumlah pengunjungnya menggunakan plot:
     ![Teks alternatif](output/1.png)<br>
 
 ## **Modeling**
