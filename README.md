@@ -9,7 +9,16 @@ Ketika akan berwisata tentu berbagai hal akan menjadi pertimbangan bagi wisatawa
 Berdasarkan masalah tersebut maka dibutuhkan sebuah sistem yang mampu memberikan rekomendasi tempat wisata. Sistem rekomendasi digunakan karena mampu memberikan penyaringan dari informasi yang sangat banyak (overload) di dunia maya untuk memberikan saran/rekomendasi pilihan objek wisata. Perkembangan jumlah informasi yang banyak di dunia maya menyebabkan sulitnya menemukan informasi yang tepat dan sesuai dengan selera/preferensi yang diinginkan wisatawan.[2]
 
 ## **Business Understanding**<br>
+kebutuhan untuk mengembangkan sistem rekomendasi tempat wisata di Yogyakarta, Indonesia. Hal ini didasari oleh pertumbuhan industri pariwisata di Yogyakarta dan kebutuhan akan rekomendasi yang akurat dan sesuai dengan preferensi pengguna. Dengan adanya sistem rekomendasi ini, diharapkan dapat meningkatkan pengalaman wisatawan dan membantu mereka dalam memilih tempat wisata yang sesuai dengan keinginan mereka.<br>
 
+    1. Pertumbuhan Industri Pariwisata di Yogyakarta
+       Didasari oleh pertumbuhan industri pariwisata di Yogyakarta, yang menunjukkan peningkatan jumlah wisatawan yang datang ke daerah tersebut. Menurut data statistik kepariwisataan DIY tahun 2017, terdapat 25.950.793 wisatawan yang datang ke Yogyakarta. Hal ini menunjukkan pentingnya pengembangan sistem rekomendasi tempat wisata untuk memenuhi kebutuhan wisatawan yang semakin meningkat.
+
+    2. Kebutuhan Akan Rekomendasi Tempat Wisata yang Akurat
+       Wisatawan seringkali mengalami kesulitan dalam memilih tujuan wisata karena informasi yang begitu banyak dan bervariasi. Dalam penelitian ini, sistem rekomendasi tempat wisata digunakan untuk memberikan penyaringan dari informasi yang sangat banyak di dunia maya, sehingga dapat memberikan saran atau rekomendasi pilihan objek wisata yang sesuai dengan preferensi wisatawan.
+
+    3. Meningkatkan Pengalaman Wisatawan
+       Dengan adanya sistem rekomendasi tempat wisata yang akurat, diharapkan dapat meningkatkan pengalaman wisatawan dalam memilih dan merencanakan perjalanan wisata mereka. Hal ini juga dapat membantu wisatawan yang merencanakan sendiri tujuan wisatanya, sehingga memerlukan waktu yang lebih sedikit untuk mengumpulkan informasi.
 
 ### Problem Statements
 
