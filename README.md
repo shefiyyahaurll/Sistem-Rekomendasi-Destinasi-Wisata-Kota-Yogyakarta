@@ -1,6 +1,4 @@
-# **Laporan Proyek Machine Learning - Shefiyyah Aurellia Wahyudi**<br>
-
-## **Sistem-Rekomendasi-Destinasi-Wisata-Kota-Yogyakarta**
+# **Sistem-Rekomendasi-Destinasi-Wisata-Kota-Yogyakarta**
 
 ## **Project Overview**<br>
 Pengunjung wisata di Kota Yogyakarta terus mengalami peningkatan setiap tahunnya, baik dari wisatawan domestik maupun asing. Hal ini menunjukkan bahwa Daerah Istimewa Yogyakarta merupakan destinasi yang sering dikunjungi oleh para wisatawan untuk berlibur. Provinsi ini memiliki banyak objek wisata yang unik dan menarik, seperti gunung, museum, bukit, pantai, goa, air terjun, budaya, dan tempat bersejarah. Oleh karena itu, pengembangan wisata di kota Yogyakarta perlu dilakukan untuk meningkatkan potensi pariwisata dan pendapatan daerah[1].<br>
